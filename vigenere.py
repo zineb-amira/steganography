@@ -1,5 +1,8 @@
 import string
-# hello
+
+string.printable = string.printable.replace("\r", "é")
+
+
 def caesar_cipher(message, key):
 	"""
 	this function takes a message and key then it generates a crypted message
@@ -93,6 +96,3 @@ def vigenere_cipher(message, password, reverse):
 	return crypted_message
 
 
-crypted_message = vigenere_cipher("le chocolat est plein de vitamine", "Le ciel est bleu", reverse=False)
-print(crypted_message)
-print(vigenere_cipher(crypted_message, "Le ciel est bleu", reverse=True))
